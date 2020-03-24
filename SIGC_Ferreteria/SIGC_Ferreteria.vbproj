@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF9723C2-5BBE-418E-A1E1-346DACA23C90}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SIGC_Negocio.My.MyApplication</StartupObject>
+    <RootNamespace>SIGC_Negocio</RootNamespace>
+    <AssemblyName>SIGC_Negocio</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SIGC_Negocio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SIGC_Negocio.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics4.Documents.Excel.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Shared.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.Misc.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.ExcelExport.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v17.1, Version=17.1.20171.1008, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SIGC_Comun\CargaExcel.vb" />
+    <Compile Include="SIGC_Comun\daFunBas.vb" />
+    <Compile Include="SIGC_Comun\Parametros.vb" />
+    <Compile Include="SIGC_FerCatalog\SIGC_Fer_Cat_frmClte.Designer.vb">
+      <DependentUpon>SIGC_Fer_Cat_frmClte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_FerCatalog\SIGC_Fer_Cat_frmClte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_FerCatalog\SIGC_Fer_Cat_frmProd.Designer.vb">
+      <DependentUpon>SIGC_Fer_Cat_frmProd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_FerCatalog\SIGC_Fer_Cat_frmProd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_FerCatalog\SIGC_Fer_Cat_frmProv.Designer.vb">
+      <DependentUpon>SIGC_Fer_Cat_frmProv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_FerCatalog\SIGC_Fer_Cat_frmProv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_FerOpe\SIGC_Fer_Ope_frmCom.Designer.vb">
+      <DependentUpon>SIGC_Fer_Ope_frmCom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_FerOpe\SIGC_Fer_Ope_frmCom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_FerOpe\SIGC_Fer_Ope_frmVtaCab.Designer.vb">
+      <DependentUpon>SIGC_Fer_Ope_frmVtaCab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_FerOpe\SIGC_Fer_Ope_frmVtaCab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_FerOpe\SIGC_Fer_Ope_frmVtaDet.Designer.vb">
+      <DependentUpon>SIGC_Fer_Ope_frmVtaDet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_FerOpe\SIGC_Fer_Ope_frmVtaDet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_FerTab\SIGC_FerTab_frmAyu.Designer.vb">
+      <DependentUpon>SIGC_FerTab_frmAyu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_FerTab\SIGC_FerTab_frmAyu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_Fer_Login.Designer.vb">
+      <DependentUpon>SIGC_Fer_Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_Fer_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_Fer_Pri.Designer.vb">
+      <DependentUpon>SIGC_Fer_Pri.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_Fer_Pri.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_FerTab\SIGC_Neg_Tab_frmCateg.Designer.vb">
+      <DependentUpon>SIGC_Neg_Tab_frmCateg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_FerTab\SIGC_Neg_Tab_frmCateg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_FerTab\SIGC_Neg_Tab_frmEstados.Designer.vb">
+      <DependentUpon>SIGC_Neg_Tab_frmEstados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_FerTab\SIGC_Neg_Tab_frmEstados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_FerTab\SIGC_Neg_Tab_frmLinea.Designer.vb">
+      <DependentUpon>SIGC_Neg_Tab_frmLinea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_FerTab\SIGC_Neg_Tab_frmLinea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_FerTab\SIGC_Neg_Tab_frmMarca.Designer.vb">
+      <DependentUpon>SIGC_Neg_Tab_frmMarca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_FerTab\SIGC_Neg_Tab_frmMarca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SIGC_FerTab\SIGC_Neg_Tab_frmUniMed.Designer.vb">
+      <DependentUpon>SIGC_Neg_Tab_frmUniMed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SIGC_FerTab\SIGC_Neg_Tab_frmUniMed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SIGC_FerCatalog\SIGC_Fer_Cat_frmClte.resx">
+      <DependentUpon>SIGC_Fer_Cat_frmClte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_FerCatalog\SIGC_Fer_Cat_frmProd.resx">
+      <DependentUpon>SIGC_Fer_Cat_frmProd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_FerCatalog\SIGC_Fer_Cat_frmProv.resx">
+      <DependentUpon>SIGC_Fer_Cat_frmProv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_FerOpe\SIGC_Fer_Ope_frmCom.resx">
+      <DependentUpon>SIGC_Fer_Ope_frmCom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_FerOpe\SIGC_Fer_Ope_frmVtaCab.resx">
+      <DependentUpon>SIGC_Fer_Ope_frmVtaCab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_FerOpe\SIGC_Fer_Ope_frmVtaDet.resx">
+      <DependentUpon>SIGC_Fer_Ope_frmVtaDet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_FerTab\SIGC_FerTab_frmAyu.resx">
+      <DependentUpon>SIGC_FerTab_frmAyu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_FerTab\SIGC_Neg_Tab_frmLinea.resx">
+      <DependentUpon>SIGC_Neg_Tab_frmLinea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_FerTab\SIGC_Neg_Tab_frmUniMed.resx">
+      <DependentUpon>SIGC_Neg_Tab_frmUniMed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_Fer_Login.resx">
+      <DependentUpon>SIGC_Fer_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_Fer_Pri.resx">
+      <DependentUpon>SIGC_Fer_Pri.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_FerTab\SIGC_Neg_Tab_frmCateg.resx">
+      <DependentUpon>SIGC_Neg_Tab_frmCateg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_FerTab\SIGC_Neg_Tab_frmEstados.resx">
+      <DependentUpon>SIGC_Neg_Tab_frmEstados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SIGC_FerTab\SIGC_Neg_Tab_frmMarca.resx">
+      <DependentUpon>SIGC_Neg_Tab_frmMarca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ferreteria-cabo-blanco-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modify.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exportar_Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vendedore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allow_users_edit_ranges.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir-de-gnome-icono-7637-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SIGC_FerBL\SIGC_FerBL.vbproj">
+      <Project>{ac16de4f-7628-4c0e-b9ca-b3a71d8c1a68}</Project>
+      <Name>SIGC_FerBL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ferretería.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bannerferreteria.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ferreteria-RIUDOMS-pintura-eines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
